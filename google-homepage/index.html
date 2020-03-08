@@ -7,19 +7,59 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Google</title>
-        <link rel="stylesheet" href="">
+        <style>
+            .center-image {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top:109px;
+            }
+            .search-bar {
+                width: 100%;
+            }
+            html, body {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+            }
+            .flex-container {
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .row {
+                width: auto;
+             }
+            .flex-item {
+                padding: 5px;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="main">
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
-            <form>
-                <input type="text" value="Search">
-                <button>Search</button>
-                <button>I'm feeling lucky</button>
-            </form>
+            <div class="flex-container">
+                <div class="row"> 
+                    <div class="flex-item">
+                        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo" class="center-image">
+            
+                    </div>
+                    <div class="flex-item">
+                        <form>
+                            <input type="text" value="Search" class=search-bar>
+                            <button>Search</button>
+                            <button>I'm feeling lucky</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
