@@ -1,11 +1,11 @@
-Easy challenge assignment:
+*Easy* challenge assignment:
 Mock up the google search landing page
 
-Result:
+*Result:*
 https://jbrezik.github.io/the_odin_project/google-homepage/easy/
 
-Hard challenge assignment:
+*Difficult* challenge assignment:
 Mock up the google search results page
 
-Result:
-https://jbrezik.github.io/the_odin_project/google-homepage/hard/
+*Result:*
+https://jbrezik.github.io/the_odin_project/google-homepage/difficult/
