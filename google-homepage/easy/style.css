@@ -21,7 +21,7 @@ p {
 
 #navbar {
     display: grid;
-    grid-template-columns: 1fr 60px 60px 60px 60px;
+    grid-template-columns: 1fr repeat(4, 60px);
     grid-template-rows: 40px;
     grid-template-areas: 
     ". gmail image menu sign-in"
@@ -55,7 +55,7 @@ p {
     border-radius: 2px;
     font-weight: bold;
     width: 60px;
-    height: 28px;
+    height: 30px;
 }
 
 /* Main styling */
@@ -79,24 +79,36 @@ p {
     justify-self: center;
     align-self: end;
 }
+img {
+    vertical-align: middle;
+}
+#magnifier {
+    margin-left: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
 #search {
-    height: 30px;
+    height: 45px;
+    width: 550px;
     grid-area: search;
+    border: 1px solid #dfe1e5;
+    border-radius: 22px;
     align-self: center;
+    justify-self: center;
+}
+#search:hover, #search:focus-within {
+	box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+#search-bar {
+    width: 90%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
 }
 #flex-box {
     display: flexbox;
     grid-area: flex-box;
-    justify-self: center;
-    align-self: center;
-}
-#google-search-btn {
-    grid-area: google-search-btn;
-    justify-self: center;
-    align-self: center;
-}
-#random-search-btn {
-    grid-area: random-search-btn;
     justify-self: center;
     align-self: center;
 }
@@ -132,21 +144,30 @@ p {
 }
 #footer {
     display: grid;
-    grid-template-columns: 90px 90px 90px 150px 1fr 80px 80px 80px;
-    grid-template-rows: 40px;
+    grid-template-columns: repeat(2,90px) 60px 150px 1fr 60px 70px 80px;
+    grid-template-rows: repeat(2,40px);
     grid-template-areas:
+    "location . . . . . . ."
     "advertising business about how-search-works . privacy terms settings"
     ;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 #footer a {
     color: #5f6368;
 }
+#footer p {
+    color: #5f6368;
+}
+#location {
+    grid-area: location;
+    grid-column: 1 / 9;
+    border-bottom: 1px solid #e4e4e4;
+    align-self: center;
+    padding-left: 25px;
+}
 #advertising {
     grid-area: advertising;
-    justify-self: center;
     align-self: center;
+    padding-left: 25px;
 }
 #business {
     grid-area: business;
@@ -177,4 +198,5 @@ p {
     grid-area: settings;
     justify-self: center;
     align-self: center;
+    margin-right: 25px;
 }
