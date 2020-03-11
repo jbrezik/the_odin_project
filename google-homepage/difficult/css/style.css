@@ -2,20 +2,7 @@ html {
     height: 100%;
     min-height: 100%;
 }
-a {
-    text-decoration: none;
-    color: rgba(0,0,0,0.87);
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-}
-a:hover {
-    text-decoration: underline;
-}
-p {
-    font-family: arial,sans-serif;
-    color: #222222;
-    font-size: 14px;
-}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -23,186 +10,18 @@ button:focus {
     outline: none;
 }
 
-/* Navbar styling */
-
-#navbar {
-    display: grid;
-    grid-template-columns: 1fr repeat(4, 60px);
-    grid-template-rows: 40px;
-    grid-template-areas: 
-    ". gmail image menu sign-in"
-    ;
-    padding-right: 20px;
+/* Hide default accordion arrow */     
+details summary { list-style-type: none; } /* Firefox */
+details summary::-webkit-details-marker { display: none; } /* Chrome */
+details summary::marker { display: none; }
+/* Closed accordion arrow */
+summary:before {
+   content: " ";
+   border: solid #666666;
+   border-width: 0 2px 2px 0;
+   padding: 0 5px 5px 0;
+   transform: rotate(45deg);
+   float: right;
 }
-#gmail {
-    grid-area: gmail;
-    justify-self: center;
-    align-self: center;
-}
-#image {
-    grid-area: image;
-    justify-self: center;
-    align-self: center;
-}
-#menu {
-    grid-area: menu;
-    justify-self: center;
-    align-self: center;
-}
-#sign-in {
-    grid-area: sign-in;
-    justify-self: center;
-    align-self: center;
-}
-#sign-in-btn {
-    color: #ffffff;
-    background-color: #4285f4;
-    border: 1px solid #4285f4;
-    border-radius: 2px;
-    font-weight: bold;
-    width: 60px;
-    height: 30px;
-}
-
-/* Main styling */
-
-#main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 250px 70px 70px 290px;
-    grid-template-areas: 
-    ". logo ."
-    ". search ."
-    ". flex-box ."
-    ". language-offer ."
-    ;
-}
-#main a{
-    color: #1a0dab;
-}
-#logo {
-    grid-area: logo;
-    justify-self: center;
-    align-self: end;
-}
-img {
-    vertical-align: middle;
-}
-#magnifier {
-    margin-left: 12px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-#search {
-    height: 45px;
-    width: 550px;
-    grid-area: search;
-    border: 1px solid #dfe1e5;
-    border-radius: 22px;
-    align-self: center;
-    justify-self: center;
-}
-#search:hover, #search:focus-within {
-	box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-}
-#search-bar {
-    width: 90%;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
-}
-#flex-box {
-    display: flexbox;
-    grid-area: flex-box;
-    justify-self: center;
-    align-self: center;
-}
-#language-offer {
-    grid-area: language-offer;
-    justify-self: center;
-    align-self: top;
-}
-.search-btn {
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    border-radius: 4px;
-    color: #5F6368;
-    font-size: 14px;
-    height: 40px;
-    width: 155px;
-}
-.search-btn:hover {
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-    border: 1px solid #c6c6c6;
-    color: #222222;
-}
-
-/* Footer styling */
-
-#footer-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #f2f2f2;
-    border-top: 1px solid #e4e4e4;
-}
-#footer {
-    display: grid;
-    grid-template-columns: repeat(2,90px) 60px 150px 1fr 60px 70px 80px;
-    grid-template-rows: repeat(2,40px);
-    grid-template-areas:
-    "location . . . . . . ."
-    "advertising business about how-search-works . privacy terms settings"
-    ;
-}
-#footer a {
-    color: #5f6368;
-}
-#footer p {
-    color: #5f6368;
-}
-#location {
-    grid-area: location;
-    grid-column: 1 / 9;
-    border-bottom: 1px solid #e4e4e4;
-    align-self: center;
-    padding-left: 25px;
-}
-#advertising {
-    grid-area: advertising;
-    align-self: center;
-    padding-left: 25px;
-}
-#business {
-    grid-area: business;
-    justify-self: center;
-    align-self: center;
-}
-#about {
-    grid-area: about;
-    justify-self: center;
-    align-self: center;
-}
-#how-search-works {
-    grid-area: how-search-works;
-    justify-self: center;
-    align-self: center;
-}
-#privacy {
-    grid-area: privacy;
-    justify-self: center;
-    align-self: center;
-}
-#terms {
-    grid-area: terms;
-    justify-self: center;
-    align-self: center;
-}
-#settings {
-    grid-area: settings;
-    justify-self: center;
-    align-self: center;
-    margin-right: 25px;
-}
+/* Opened accordion arrow */
+details[open] summary::before { transform: rotate(225deg); }
