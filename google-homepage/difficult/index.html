@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-favicon-2015.png">
     <title>Google results</title>
@@ -12,20 +13,32 @@
         <a href="#" id="google-logo"><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" width="92px" hieght="30px"></a>
         <div id="search">
             <input type="text" id="search-bar" value="build this webpage"/>
-            <img src="https://icon-library.net//images/search-icon-transparent-background/search-icon-transparent-background-8.jpg" id="magnifier" height="20px" width="20px" alt=""/>
         </div>
-        <a href="#" id="menu"><img src="https://static.thenounproject.com/png/198752-200.png" height="20px" width="20px" alt="menu grid"/></a>
+        <a href="#" id="menu"><i class="material-icons">apps</i></a>
         <a href="#" id="sign-in"><button id="sign-in-btn">Sign in</button></a>
     </div>
     <div id="result-buttons">
-        <button id="all-btn">All</button>
-        <button id="images-btn">Images</button>
-        <button id="videos-btn">Videos</button>
-        <button id="books-btn">Books</button>
-        <button id="news-btn">News</button>
-        <button id="more-btn">More</button>
-        <button id="settings-btn">Settings</button>
-        <button id="tools-btn">Tools</button>
+        <ul id="horizontal-links">
+            <li class="icon-btn all-btn"><a href="#">All</a><li>
+            <li class="icon-btn maps-btn"><a href="#">Maps</a><li>
+            <li class="icon-btn videos-btn"><a href="#">Videos</a><li>
+            <li class="icon-btn news-btn"><a href="#">News</a><li>
+            <li class="icon-btn images-btn"><a href="#">Images</a><li>
+            <li class="icon-btn more-btn"><a href="#">More</a><li>
+                <li class="li-spacer"></li>
+            <li class="icon-btn settings-btn"><a href="#">Settings</a><li>
+            <li class="icon-btn tools-btn"><a href="#">Tools</a><li></li>
+        </ul>
+<!--
+        <button class="result-btn active-btn" id="all-btn">All</button>
+        <button class="result-btn" id="maps-btn"><i class="material-icons">place</i>Maps</button>
+        <button class="result-btn" id="videos-btn"><i class="material-icons">slideshow</i>Videos</button>
+        <button class="result-btn" id="news-btn"><i class="material-icons">message</i>News</button>
+        <button class="result-btn" id="images-btn"><i class="material-icons">image</i>Images</button>
+        <button class="result-btn" id="more-btn"><i class="material-icons">more_vert</i>More</button>
+        <button class="result-btn" id="settings-btn">Settings</button>
+        <button class="result-btn tools-btn" id="tools-btn">Tools</button>
+-->
     </div>
     <div id="main">
         <div id="results-count">

@@ -1,8 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
 html {
     height: 100%;
     min-height: 100%;
 }
-
 input:focus,
 select:focus,
 textarea:focus,
@@ -14,18 +18,19 @@ button:focus {
 
 #navbar {
     display: grid;
-    grid-template-columns: 140px 640px 1fr 50px 100px;
-    grid-template-rows: 60px;
+    grid-template-columns: 140px 640px 1fr 50px 130px;
+    grid-template-rows: 80px;
     grid-template-areas:
     "google-logo search . menu sign-in"
     ;
+}
+#navbar a, #navbar a:hover {
+    color: #5f6368;
 }
 #google-logo {
     grid-area: google-logo;
     justify-self: center;
     align-self: center;
-    margin-top: 15px;
-    margin-left: -20px;
 }
 #search {
     height: 40px;
@@ -39,10 +44,14 @@ button:focus {
 #search:hover, #search:focus-within {
 	box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
-#magnifier {
-    margin-bottom: -5px;
-    /* Converts the base png to blue-ish */
-    filter: invert(45%) sepia(42%) saturate(1368%) hue-rotate(188deg) brightness(99%) contrast(94%);
+#search:after {
+    content: "search";
+    font-family: "Material Icons";
+    font-size: 24px;
+    color: #4285f4;
+	position: relative;
+    top: 6px;
+    left: 5px;
 }
 #search-bar {
     width: 90%;
@@ -56,15 +65,13 @@ button:focus {
     grid-area: menu;
     justify-self: center;
     align-self: center;
-    margin-top: 15px;
-    margin-right: 15px;
+    padding-top: 5px;
 }
 #sign-in {
     grid-area: sign-in;
     justify-self: center;
     align-self: center;
-    margin-top: 15px;
-    margin-right: 15px;
+    
 }
 #sign-in-btn {
     color: #ffffff;
@@ -80,14 +87,72 @@ button:focus {
 	box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
 }
 
+/* Results buttons */
+#result-buttons {
+    display: grid;
+    grid-template-columns: 150px 650px 1fr;
+    grid-template-areas: ". horizontal-links .";
+    border-bottom: solid 1px #eeeeee;
+}
+ul#horizontal-links {
+    grid-area: horizontal-links;
+	min-width: 696px;
+	list-style: none;
+}
+ul#horizontal-links li {
+    display: inline-block;
+    line-height: 30px;
+}
+li.all-btn {
+    border-bottom: 3px solid #1A73E8;
+}  
+.all-btn:before {
+    content: "search";
+    color: #1A73E8;
+}
+ul#horizontal-links a {
+    font-family: arial,sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    color: #5f6368;
+    padding: 16px 12px 12px 10px;
+}
+.icon-btn:before { 
+    font-family: "Material Icons"; 
+	position: relative;
+    top: 6px;
+    left: 5px;
+	font-size: 20px;  
+}
+.maps-btn:before {content: "place";color: #5f6368;}
+.videos-btn:before {content: "slideshow";color: #5f6368;}
+.news-btn:before {content: "message";color: #5f6368;}
+.images-btn:before {content: "image";color: #5f6368;}
+.more-btn:before {content: "more_vert";color: #5f6368;}
+.li-spacer {width: 50px;}
+.tools-btn:hover {
+    background-color: #f8f8f8;
+    background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+    background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+    -webkit-box-shadow:inset 0px 0px 0px 1px #c6c6c6;
+    -moz-box-shadow:inset 0px 0px 0px 1px #c6c6c6;
+    box-shadow:inset 0px 0px 0px 1px #c6c6c6;
+    border-radius: 3px;
+}
 
 
 
-/* Hide default accordion arrow */     
-details summary { list-style-type: none; } /* Firefox */
-details summary::-webkit-details-marker { display: none; } /* Chrome */
+
+
+
+
+/*
+
+ Hide default accordion arrow    
+details summary { list-style-type: none; } /* Firefox 
+details summary::-webkit-details-marker { display: none; } /* Chrome 
 details summary::marker { display: none; }
-/* Closed accordion arrow */
+/* Closed accordion arrow 
 summary:before {
    content: " ";
    border: solid #666666;
@@ -96,5 +161,7 @@ summary:before {
    transform: rotate(45deg);
    float: right;
 }
-/* Opened accordion arrow */
+/* Opened accordion arrow 
 details[open] summary::before { transform: rotate(225deg); }
+
+*/
