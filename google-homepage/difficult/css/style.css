@@ -10,6 +10,79 @@ button:focus {
     outline: none;
 }
 
+/* Navbar */
+
+#navbar {
+    display: grid;
+    grid-template-columns: 140px 640px 1fr 50px 100px;
+    grid-template-rows: 60px;
+    grid-template-areas:
+    "google-logo search . menu sign-in"
+    ;
+}
+#google-logo {
+    grid-area: google-logo;
+    justify-self: center;
+    align-self: center;
+    margin-top: 15px;
+    margin-left: -20px;
+}
+#search {
+    height: 40px;
+    width: 630px;
+    grid-area: search;
+    border: 1px solid #dfe1e5;
+    border-radius: 22px;
+    align-self: center;
+    justify-self: center;
+}
+#search:hover, #search:focus-within {
+	box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+#magnifier {
+    margin-bottom: -5px;
+    /* Converts the base png to blue-ish */
+    filter: invert(45%) sepia(42%) saturate(1368%) hue-rotate(188deg) brightness(99%) contrast(94%);
+}
+#search-bar {
+    width: 90%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    padding-left: 15px;
+}
+#menu {
+    grid-area: menu;
+    justify-self: center;
+    align-self: center;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+#sign-in {
+    grid-area: sign-in;
+    justify-self: center;
+    align-self: center;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+#sign-in-btn {
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #1a73e8;
+    border: 1px solid #1a73e8;
+    border-radius: 4px;
+    width: 95px;
+    height: 35px;
+}
+#sign-in-btn:hover {
+	background: #2b7de9;
+	box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+}
+
+
+
+
 /* Hide default accordion arrow */     
 details summary { list-style-type: none; } /* Firefox */
 details summary::-webkit-details-marker { display: none; } /* Chrome */
